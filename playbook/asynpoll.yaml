@@ -1,16 +1,16 @@
+---
 - name: creating async
   hosts: all
   become: true
   gather_facts: yes
   tasks:
-   - name: install nexus
-     apt:
-      name: jenkins
-      state: latest
-    async: 10
-    poll: 5
-   - name: start service jenkins
-     service:
-       name: jenkins
-       state: start 
-      
+    - name: install jenkins
+      apt:
+        name: jenkins
+        state: latest
+      async: 10
+      poll: 5
+    - name: start service jenkins
+      service:
+        name: jenkins
+        state: started

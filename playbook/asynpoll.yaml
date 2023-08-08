@@ -1,6 +1,6 @@
 ---
 - name: creating async
-  hosts: localhost
+  hosts: all
   become: true
   gather_facts: yes
   tasks:
@@ -8,15 +8,13 @@
       apt:
         name: tomcat9
         state: latest
-      async: 5
-      poll: 4
+
 
     - name: start service tomcat
       service:
         name: tomcat9
         state: started
-      async: 3
-      poll: 1
+
 
     - name: install Nexus
       apt:

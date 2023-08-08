@@ -8,9 +8,22 @@
       apt:
         name: jenkins
         state: latest
-      async: 10
-      poll: 5
+      async: 5
+      poll: 4
+
     - name: start service jenkins
       service:
         name: jenkins
+        state: started
+
+    - name: install Nexus
+      apt:
+        name: nexus  # Use lowercase 'nexus'
+        state: latest
+      async: 5
+      poll: 3
+
+    - name: start Nexus
+      service:
+        name: nexus  # Use lowercase 'nexus'
         state: started

@@ -1,6 +1,6 @@
 ---
 - name: creating async
-  hosts: all
+  hosts: localhost
   become: true
   gather_facts: yes
   tasks:

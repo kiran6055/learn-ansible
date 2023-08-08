@@ -4,9 +4,9 @@
   become: true
   gather_facts: yes
   tasks:
-    - name: install jenkins
+    - name: install tomcat
       apt:
-        name: jenkins
+        name: tomcat
         state: latest
       async: 5
       poll: 4

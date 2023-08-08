@@ -6,24 +6,24 @@
   tasks:
     - name: install tomcat
       apt:
-        name: tomcat
+        name: tomcat9
         state: latest
       async: 5
       poll: 4
 
-    - name: start service jenkins
+    - name: start service tomcat
       service:
-        name: jenkins
+        name: tomcat9
         state: started
 
     - name: install Nexus
       apt:
-        name: nexus  # Use lowercase 'nexus'
+        name: nexus
         state: latest
       async: 5
       poll: 3
 
     - name: start Nexus
       service:
-        name: nexus  # Use lowercase 'nexus'
+        name: nexus
         state: started

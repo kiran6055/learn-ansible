@@ -1,0 +1,2 @@
+#create coomand in ansible vault
+#we can give ansible-vault create pass.yaml this command will create a file and encrypt the data it in it while creating a file through ansible valut it will ask us for password

@@ -8,12 +8,16 @@
       apt:
         name: tomcat9
         state: latest
+      async: 5
+      poll: 2
 
 
     - name: start service tomcat
       service:
         name: tomcat9
         state: started
+      aync: 5
+      poll: 2  
 
 
     - name: install nginx
@@ -21,9 +25,11 @@
         name: nginx
         state: latest
       async: 5
-      poll: 3
+      poll: 2
 
     - name: start nginx
       service:
         name: nginx
         state: started
+      async: 5
+      poll: 2

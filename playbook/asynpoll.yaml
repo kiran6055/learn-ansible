@@ -39,12 +39,12 @@
       register: result4
     - name: show registered context
       debug:
-      var:
-        - result1
-        - result2
-        - result3
-        - result4
+        var:
+          - result1
+          - result2
+          - result3
+          - result4
 
     - name: show registered context as jinja2
       debug:
-      msg: "{{ result1 ~ ', ' ~ result2 ~ ', ' ~ result3 ~ ', ' ~ result4 }}"
+        msg: "{{ result1 ~ ', ' ~ result2 ~ ', ' ~ result3 ~ ', ' ~ result4 }}"

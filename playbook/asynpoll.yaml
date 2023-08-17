@@ -9,7 +9,7 @@
         name: tomcat9
         state: latest
       async: 500
-      poll: 2
+      poll: 0
 
 
     - name: start service tomcat
@@ -17,7 +17,7 @@
         name: tomcat9
         state: started
       async: 500
-      poll: 2  
+      poll: 0  
 
 
     - name: install nginx
@@ -25,11 +25,11 @@
         name: nginx
         state: latest
       async: 500
-      poll: 2
+      poll: 0
 
     - name: start nginx
       service:
         name: nginx
         state: started
       async: 500
-      poll: 2
+      poll: 0

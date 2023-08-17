@@ -16,14 +16,14 @@
         state: started
 
 
-    - name: install Nexus
+    - name: install nginx
       apt:
-        name: nexus
+        name: nginx
         state: latest
       async: 5
       poll: 3
 
-    - name: start Nexus
+    - name: start nginx
       service:
-        name: nexus
+        name: nginx
         state: started

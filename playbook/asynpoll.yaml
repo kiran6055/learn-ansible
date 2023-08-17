@@ -52,3 +52,10 @@
     - name: show registered context as jinja2
       debug:
         var: jobids
+    - name: Wait for Nginx installation to complete
+      async_status:
+        jid: "{{ item }}"
+      with_items: "{{ jobids }}"
+      register: job_result
+      until: job_result.finished
+      retries: 30   # Retry for up to 5 minutes   

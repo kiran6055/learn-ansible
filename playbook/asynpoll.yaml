@@ -16,7 +16,7 @@
       service:
         name: tomcat9
         state: started
-      aync: 5
+      async: 5
       poll: 2  
 
 

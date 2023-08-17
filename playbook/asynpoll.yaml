@@ -8,7 +8,7 @@
       apt:
         name: tomcat9
         state: latest
-      async: 5
+      async: 500
       poll: 2
 
 
@@ -16,7 +16,7 @@
       service:
         name: tomcat9
         state: started
-      async: 5
+      async: 500
       poll: 2  
 
 
@@ -24,12 +24,12 @@
       apt:
         name: nginx
         state: latest
-      async: 5
+      async: 500
       poll: 2
 
     - name: start nginx
       service:
         name: nginx
         state: started
-      async: 5
+      async: 500
       poll: 2

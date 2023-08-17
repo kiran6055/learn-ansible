@@ -3,6 +3,7 @@
   hosts: all
   become: true
   gather_facts: yes
+  serial: 1
   vars:
     jobids: []
   tasks:

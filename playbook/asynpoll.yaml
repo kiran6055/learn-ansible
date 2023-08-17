@@ -10,6 +10,7 @@
         state: latest
       async: 500
       poll: 0
+      register: result1
 
 
     - name: start service tomcat
@@ -18,6 +19,7 @@
         state: started
       async: 500
       poll: 0  
+      register: result2
 
 
     - name: install nginx
@@ -26,6 +28,7 @@
         state: latest
       async: 500
       poll: 0
+      register: result3
 
     - name: start nginx
       service:
@@ -33,3 +36,10 @@
         state: started
       async: 500
       poll: 0
+      register: result4
+    - name: show registered context
+      debug:
+        var: result1
+    - name: show registered context as jinja2
+      debug: 
+        msg: "{{ result1  }}"
